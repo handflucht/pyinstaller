@@ -40,5 +40,5 @@ The following steps will convert the `main.py` into a binary. This binary will a
    
 3. Execute your binary:
    ```
-   docker run --rm my-python
+   docker run --rm pyinstaller
    ```
