@@ -35,10 +35,10 @@ The following steps will convert the `main.py` into a binary. This binary will a
 2. Change into the dir where your python-code exists to have the correct context:
    ```
    cd /projects/projectA
-   docker build --build-arg PYTHON_FILE=main.py -f ../pyinstaller/Dockerfile -t pyinstaller:latest .
+   docker build --build-arg PYTHON_FILE=main.py -f ../pyinstaller/Dockerfile -t handflucht/pyinstaller:latest .
    ```
    
 3. Execute your binary:
    ```
-   docker run --rm pyinstaller
+   docker run --rm handflucht/pyinstaller
    ```
