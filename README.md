@@ -22,10 +22,20 @@ The following steps will convert the `main.py` into a binary. This binary will a
     git clone git@github.com:handflucht/pyinstaller.git
    ```
 
+   This will lead to the following directory-structure:
+   ```
+    |---projects
+        |---projectA
+            |---main.py
+            |---requirements.txt
+        |---pyinstaller
+            |---Dockerfile
+    ```
+
 2. Change into the dir where your python-code exists to have the correct context:
    ```
    cd /projects/projectA
-   docker build --build-arg PYTHON_FILE=main.py -t -f pyinstaller/Dockerfile my-python
+   docker build --build-arg PYTHON_FILE=main.py -f ../pyinstaller/Dockerfile -t pyinstaller:latest .
    ```
    
 3. Execute your binary:
